@@ -1,15 +1,13 @@
 
 class Boid {
     constructor() {
-        this.position = createVector(random(width), random(height));
+        this.position = createVector(random(windowWidth), random(windowHeight));
         this.velocity = p5.Vector.random2D();
         this.velocity.setMag(random(1,2));
         this.acceleration = createVector();
-        this.maxAcceleration;
-        this.maxVelocity;
-        this.width = windowWidth;
-        this.height = windowHeight;
-        this.sight;
+        this.maxAcceleration =1;
+        this.maxVelocity =4;
+        this.sight = 15;
     }
 
     // Spawns boids
@@ -21,16 +19,16 @@ class Boid {
     }   
     // Confines boids to screen
     edges() {
-        if (this.position.x > this.width) {
+        if (this.position.x > window.innerWidth) {
             this.position.x = 0;
         } else if (this.position.x < 0) {
-            this.position.x = this.width;
+            this.position.x = window.innerWidth;
         }
 
-        if (this.position.y > this.height) {
+        if (this.position.y > window.innerHeight) {
             this.position.y = 0;
         } else if (this.position.y < 0) {
-            this.position.y = this.height;
+            this.position.y = window.innerHeight;
         }
     }
 

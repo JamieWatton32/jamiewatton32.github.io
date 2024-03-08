@@ -3,8 +3,7 @@ const flock =[];
 const NUMBER_OF_BOIDS = 300;
 let velocitySlider, accelerationSlider, sightSlider;
 function setup() {
-    let renderer = createCanvas(windowWidth, windowHeight);
-    renderer.parent("boids-sub")
+    createCanvas(windowWidth, windowHeight);
     velocitySlider = createSlider(2, 10, 1, 0.1);
     accelerationSlider = createSlider(1, 2, 1, 0.1);
     sightSlider = createSlider(10, 40, 1, 0.1);
