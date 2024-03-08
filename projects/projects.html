@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><button onclick="toggleDiv('about-container')">Home</button>
+            <li><button onclick="toggleDiv('skills-container')">Skills</button>
+            <li><button onclick="toggleDiv('experience-container')">Experience</button></li>
+            <li><button onclick="toggleDiv('projects-container')">Projects</button></li>
+            <li><button onclick="toggleDiv('contact-container')">Contact me!</button></li>
+        </ul>
+        <div class="hamburger" onclick="toggleDropdown()">
+            <span>&#9776;</span>
+        </div>
+    </nav>
+    <div class="dropdown" id="dropdown">
+        <ul>
+            <li><button onclick="toggleDiv('about-container')">Home</button></li>
+            <li><button onclick="toggleDiv('skills-container')">Skills</button></li>
+            <li><button onclick="toggleDiv('experience-container')">Experience</button></li>
+            <li><button onclick="toggleDiv('projects-container')">Projects</button></li>
+            <li><button onclick="toggleDiv('contact-container')">Contact me!</button></li>
+
+        </ul>
+    </div>
+    <div id="container">
+
+        <div id='projects-container'>
+            <div id="boids" class='item'>
+                <h3>Natural flocking simulation (Now ported to JavaScipt!)</h3>
+                <p>Similar to Conways Game of Life, Boids is a artifical life program.
+                    first developed in 1986, it simulates the flocking behaviour of birds, schools of fish, etc.</p>
+
+                <p> Using the p5.js library I ported my orginal python version of the algorithm into
+                    javascript so youm the reader, can check it out without any downloads!</p>
+                <p>Click <a href="./projects/projects.html">here</a> to see learn more
+                    algorithm and some pseudocode. </p>
+                <p>Click <a href="./projects/p5/boids.html">here</a> to make it interactive!</p>
+                </p>
+          
+        </div>
+    </div>
+
+</body>
+
+</html>
