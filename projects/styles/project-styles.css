@@ -24,8 +24,8 @@ a:hover{
 nav {
     background-color: #333;
     display: flex;
-    justify-content: space-between; /* Align items with space in between */
-    align-items: center; /* Vertically center items */
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     text-align: center;
 }
@@ -34,15 +34,15 @@ nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    display: flex; /* Use flexbox for the list */
+    display: flex; 
 }
 
 nav ul li {
-    margin-right: 10px; /* Add some space between list items */
+    margin-right: 10px; 
 }
 
 nav ul li:last-child {
-    margin-right: 0; /* Remove margin from the last list item */
+    margin-right: 0; 
 }
 
 nav ul li button  {

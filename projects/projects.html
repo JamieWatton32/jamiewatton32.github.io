@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="./styles/project-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 
 <body>
     <nav>
         <ul>
-            <li><button onclick="toggleDiv('about-container')">Home</button>
-            <li><button onclick="toggleDiv('skills-container')">Skills</button>
-            <li><button onclick="toggleDiv('experience-container')">Experience</button></li>
-            <li><button onclick="toggleDiv('projects-container')">Projects</button></li>
-            <li><button onclick="toggleDiv('contact-container')">Contact me!</button></li>
+            <li><a href= "/index.html"></a>Home</li>
+            <li><a href= "/skills-page/skills.html"></a>Skills</li>
+            <li><a href= "/experience-page/experience.html"></a>Experience</li>
+            <li><a href= "/contact-page/contact.html"></a>Contact me!</li>
         </ul>
         <div class="hamburger" onclick="toggleDropdown()">
             <span>&#9776;</span>
@@ -23,12 +23,10 @@
     </nav>
     <div class="dropdown" id="dropdown">
         <ul>
-            <li><button onclick="toggleDiv('about-container')">Home</button></li>
-            <li><button onclick="toggleDiv('skills-container')">Skills</button></li>
-            <li><button onclick="toggleDiv('experience-container')">Experience</button></li>
-            <li><button onclick="toggleDiv('projects-container')">Projects</button></li>
-            <li><button onclick="toggleDiv('contact-container')">Contact me!</button></li>
-
+            <li><a href= "/index.html"></a>Home</li>
+            <li><a href= "/skills-page/skills.html"></a>Skills</li>
+            <li><a href= "/experience-page/experience.html"></a>Experience</li>
+            <li><a href= "/contact-page/contact.html"></a>Contact me!</li>
         </ul>
     </div>
     <div id="container">
@@ -41,13 +39,28 @@
 
                 <p> Using the p5.js library I ported my orginal python version of the algorithm into
                     javascript so youm the reader, can check it out without any downloads!</p>
-                <p>Click <a href="./projects/projects.html">here</a> to see learn more
-                    algorithm and some pseudocode. </p>
-                <p>Click <a href="./projects/p5/boids.html">here</a> to make it interactive!</p>
+                    <div id="boids-sub">
+                        <script src="/scripts/embedboids/p5/boids.js"></script>
+                        <script src = "/scripts/embedboids/p5/sketch.js"></script>
+                    </div>
+                <p>Click <a href="/projects/p5/boids.html">here</a> to make it interactive!</p>
                 </p>
+                </div>
+                <div id="grade-calculator" class='item'>
+                <h3>Grade calculator using selenium in python</h3>
+                <p>Selenium is a popular browser automation tool with support in C#, Ruby, Java, Python, and JavaScript.</p>
+                <p>Using the selenium library in Python I created a web scraper for Brightspace that automates microsoft login, data entry,
+                    and analysis in order to automate the process of determining a individuals grades.</p> 
+                </p>
+                <p>Download it here <a href="./projects/grade-calc/gradecalculator.zip/"
+                        download="gradecalculator.zip">here</a></p>
+                <p>Or at my <a href="https://github.com/JamieWatton32/BrightspaceScraper" id="boids-link">Github</a></p>
+                </p>
+            </div>
           
         </div>
     </div>
+<script src = "/scripts/toggleDropdown.js"></script>
 
 </body>
 
