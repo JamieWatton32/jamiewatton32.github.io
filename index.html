@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./styles/homepage-styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><button onclick="toggleDiv('about-container')">Home</button>
+            <li><button onclick="toggleDiv('skills-container')">Skills</button>
+            <li><button onclick="toggleDiv('experience-container')">Experience</button></li>
+            <li><button onclick="toggleDiv('contact-container')">Contact me!</button></li>
+            <li><button onclick="toggleDiv('projects-container')">Projects</button></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- <div class="image-container">
+        <img src="./images/mydawg.png" alt="Picture of a dog">
+    </div> -->
+        <div id="about-container">
+            <div id="about" class="item">
+                <h2>About Me</h2>
+                <p>Hi My name is Jamie! I am chemical engineering graduate from Dalhousie University. I am a
+                    problem-solver by nature and have astrong eye for detail. On top of my engineering degree I am
+                    pursuing a diploma in IT programming from Nova Scotia Community College. I bring the skill set of an
+                    engineer mixed with the mind set of a programmer to create practical applications for real-use.</p>
+            </div>
+        </div>
+        <div id=skills-container>
+            <div id="skills" class="item">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Skilled in Python 3.8+</li>
+                    <li>Proficient in database administration</li>
+                    <li>Understanding in CSS3 and HTML5</li>
+                    <li>Familiarity in Windows administration</li>
+                    <li>Knowledgeable in computer networking</li>
+                    <li>Proficient in Microsoft 365</li>
+                    <li>Beginner in JavaScript</li>
+                    <li>Skill in Aspen HYSYS</li>
+                    <li>Proficient in COMSOL Multiphysics</li>
+                    <li>Skilled using MATLAB</li>
+                    <li>SKilled in Solidworks</li>
+                </ul>
+        </div>
+        </div>
+    
+    <div id='experience-container'>
+        <div id="experience" class="item">
+            <h2>Work Experience</h2>
+            <p>Position: Web Developer</p>
+            <p>Company: ABC Corp</p>
+            <p>Date: January 2020 - Present</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada velit eu ligula
+                fermentum, ac bibendum magna vestibulum. Donec auctor sit amet est eget bibendum.</p>
+        </div>
+    </div>
+
+    <div id="contact-container">
+        <div id="contact" class="item">
+            <p>This is a place holder</p>
+        </div>
+    </div>
+
+    <div id='projects-container'>
+        <div id="boids" class='item'>
+            <h3>Natural flocking simulation (Now ported to JavaScipt!)</h3>
+            <p><p>Click <a href="./p5/boids.html">here</a> to check out a interactive project!</p></p>
+        </div>
+        <div id="grade-calculator" class='item'>
+            <h3>Grade calculator using selenium in python</h3>
+            <p>Download it here <a href="./project-page/pythonscripts" download="Grade-calculator">here</a></p>
+            <p>Or at my <a href="path_to_file">Github</a></p>
+            </p>
+        </div>
+        <div id="-website" class='item'>
+            <h3>This website of course!</h3>
+            <p>text goes here</p>
+        </div>
+
+    </div>
+    </div>
+    <script src='./scripts/toggleDiv.js'></script>
+</body>
+
+</html>
