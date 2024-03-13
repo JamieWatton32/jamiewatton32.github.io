@@ -199,14 +199,20 @@ nav ul li a  {
 }
 /*small devices (phones, 600px and down) (IPhone SE) */
 @media only screen and (min-width: 401px) and (max-width: 600px){
-
+    #card-placement{
+        border: 5px dashed rgba(255,255,255,.5);
+        border-radius: 15px;
+        width:65%;
+        height:57.5vh;
+        margin: auto;
+    }
     .hamburger {
         display: block;
         
     }
     .hamburger span {
         padding-left: 20px;
-      
+        
     }
     nav ul {
         display: none; 
@@ -227,15 +233,15 @@ nav ul li a  {
     .dropdown li{
         border: 2px solid #000000;
         text-align: center;
-        grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(screen, 1fr));
         border-bottom: 0;
-       
+        
     }
     .dropdown li:last-child{
         border-bottom: 2px solid #000000;
     }
     .dropdown ul li button {
-      
+        
         font-size: 20px;
         font-weight: bold;
         padding:0;
@@ -249,9 +255,11 @@ nav ul li a  {
         display: flex;
         position: fixed;
         top: 70vh;
-        overflow: hidden;
         text-align: center;
+        padding:10px;
         max-width: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
     }
     #card-home p{
         display:none;
@@ -260,19 +268,23 @@ nav ul li a  {
         display:none;
     }
     #card-home .card{
-        background-image: url(../images/playing-card.jpg);
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.938);
         display: flex;
         margin:0.5vh;
         width:12.5vh;
         height:25vh;
+        color: rgba(6, 56, 5, 0.884);
+        border: 3px solid red;
     }
-    #card-home >.card > h2{
-        position: relative;
-        font-size: 16px;
-        height: fit-content;
+    #card-home .card >h3{
         margin: auto;
+        overflow: hidden;
+        font-size: 16px;
     }
+   #card-placement >.card>h3{
+    font-size: 16px;
+    padding-top: -5%;
+   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px){
