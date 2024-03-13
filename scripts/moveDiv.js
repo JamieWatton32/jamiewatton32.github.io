@@ -13,18 +13,15 @@ cards.forEach(card => {
             // Move all cards from cardPlacement  to prior 
             if (!card.dataset.originalHeight) {
                 card.dataset.originalHeight = (card.clientHeight-10) + 'px';
-                console.log(card.dataset.originalHeight);
             }
             while (cardPlacement.firstChild) {
                 
                 const cardToMove = cardPlacement.firstChild;
                 prior.appendChild(cardToMove);
-                cardToMove.style.height = cardToMove.dataset.originalHeight
-                console.log(cardToMove,card.style.height);
+                cardToMove.style.height = cardToMove.dataset.originalHeight;
             }
             // Move the clicked card to the cardPlacement 
-            const heightDifference = prior.clientHeight - cardPlacement.clientHeight;
-            card.style.height = (card.clientHeight - heightDifference) + "px";
+            card.style.height = cardPlacement.clientHeight + 'px';
             cardPlacement.appendChild(card);
          
         }

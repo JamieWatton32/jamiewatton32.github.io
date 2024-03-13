@@ -11,6 +11,11 @@ a:visited{
 a:hover{
     color: #f77070be;
 }
+.center-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 nav {
     background-color: white;
     display: flex;
@@ -88,18 +93,24 @@ nav ul li button  {
    
 }
 #card-placement{
+    background-color: none;
     border: 5px dashed rgba(255,255,255,.5);
     border-radius: 15px;
-    max-height: fit-content;
+    overflow: hidden;
+    max-height: max-content;
+}
+#card-home{
+    overflow: hidden;
 }
 .card {
-    background-color: #fff;
+    background-color: whitesmoke;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(15, 15, 15, 0.521);
     margin:auto;
+    
     }
-@media only screen and (max-width: 400px){
+@media only screen and (min-width: 300px) and (max-width: 400px){
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
         border-radius: 15px;
@@ -153,13 +164,14 @@ nav ul li button  {
         text-align: center;
     }
     #card-home {
-        display: grid;
-        grid-auto-flow: column;
+        display: flex;
         position: fixed;
         top: 70vh;
-        overflow: hidden;
         text-align: center;
+        padding:10px;
         max-width: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
     }
     #card-home p{
         display:none;
@@ -168,7 +180,9 @@ nav ul li button  {
         display:none;
     }
     #card-home .card{
-        display: grid;
+        background-image: url(../images/playing-card.jpg);
+        background-color: white;
+        display: flex;
         margin:0.5vh;
         width:12.5vh;
         height:25vh;
@@ -181,7 +195,7 @@ nav ul li button  {
     }
 }
 /*small devices (phones, 600px and down) (IPhone SE) */
-@media only screen and (max-width: 600px){
+@media only screen and (min-width: 401px) and (max-width: 600px){
 
     .hamburger {
         display: block;
@@ -210,7 +224,7 @@ nav ul li button  {
     .dropdown li{
         border: 2px solid #000000;
         text-align: center;
-        grid-template-rows: repeat(auto-fit, minmax(screen, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
         border-bottom: 0;
        
     }
@@ -229,8 +243,7 @@ nav ul li button  {
         text-align: center;
     }
     #card-home {
-        display: grid;
-        grid-auto-flow: column;
+        display: flex;
         position: fixed;
         top: 70vh;
         overflow: hidden;
@@ -244,7 +257,9 @@ nav ul li button  {
         display:none;
     }
     #card-home .card{
-        display: grid;
+        background-image: url(../images/playing-card.jpg);
+        background-color: white;
+        display: flex;
         margin:0.5vh;
         width:12.5vh;
         height:25vh;
