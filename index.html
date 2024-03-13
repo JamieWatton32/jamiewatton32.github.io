@@ -11,11 +11,11 @@
 <body>
     <nav>
         <ul>
-            <li><button onclick="toggleDiv('about-container')">Home</button>
-            <li><button onclick="toggleDiv('skills-container')">Skills</button>
-            <li><button onclick="toggleDiv('experience-container')">Experience</button></li>
-            <li><button onclick="toggleDiv('projects-container')">Projects</button></li>
-            <li><button onclick="toggleDiv('contact-container')">Contact me!</button></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/projects/projects.html">Projects</a></li>
+            <li><a href="/skills-page/skills.html">Skills</a></li>
+            <li><a href="/experience-page/experience.html">Experience</a></li>
+            <li><a href="/contact-page/contact.html">Contact me!</a></li>
         </ul>
         <div class="hamburger" onclick="toggleDropdown()">
             <span>&#9776;</span>
@@ -23,15 +23,13 @@
     </nav>
     <div class="dropdown" id="dropdown">
         <ul>
-            <li><button onclick="toggleDiv('about-container')">Home</button></li>
-            <li><button onclick="toggleDiv('skills-container')">Skills</button></li>
-            <li><button onclick="toggleDiv('experience-container')">Experience</button></li>
-            <li><button onclick="toggleDiv('projects-container')">Projects</button></li>
-            <li><button onclick="toggleDiv('contact-container')">Contact me!</button></li>
-
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/projects/projects.html">Projects</a></li>
+            <li><a href="/skills-page/skills.html">Skills</a></li>
+            <li><a href="/experience-page/experience.html">Experience</a></li>
+            <li><a href="/contact-page/contact.html">Contact me!</a></li>
         </ul>
     </div>
-
 
     <div id="container">
         <div id="card-placement" >
@@ -58,19 +56,35 @@
         </div>
         <div id = "experience-container" class="card">
             <h2>Work Experience</h2>
-            <p>Position: Web Developer</p>
-            <p>Company: ABC Corp</p>
-            <p>Date: January 2020 - Present</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada velit eu ligula
-                fermentum, ac bibendum magna vestibulum. Donec auctor sit amet est eget bibendum.</p>
+            <p>Click <a href = "./experience-page/experience.html">here</a> to learn more</p>
+            <ul>
+                <li>Position: Sales</li>
+                <ul>
+                    <li>Company: Paint Store woop</li>
+                    <li>Date: FEB 2021- Present</li>
+                </ul>
+                <li>Position: Student</li>
+                <ul>
+                    <li>Company: Dal</li>
+                    <li>Date: Sept 2017 - June 2022</li>
+                </ul>
+                <li>Position: Student</li>
+                <ul>
+                    <li>Company: NSCC</li>
+                    <li>Date: January 2024 - Present</li> 
+                </ul>
+                
+            </ul>
         </div>
         <div id='projects-container' class='card'>
             <h2>Projects</h2>
             <ul>
-                <li>boids</li>
-                <li>grades</li>
-                <li>website</li>
+                <li>Artifical life simulation</li>
+                <li>Automated grade calcuator using selenium</li>
+                <li>This website!</li>
+                <li>Fluidized bed design</li>
             </ul>
+            <p>Click <a href = "./projects/projects.html">here</a> to learn mor</p>
             </div>
         </div>
     <script src = './scripts/moveDiv.js'></script>

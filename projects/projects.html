@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Page</title>
-    <link rel="stylesheet" href="./styles/project-styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects Page</title>
+<link rel="stylesheet" href="./styles/project-styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
+
 <body>
     <nav>
         <ul>
-            <li><a href= "/index.html">Home</a></li>
-            <li><a href= "/skills-page/skills.html">Skills</a></li>
-            <li><a href= "/experience-page/experience.html">Experience</a></li>
-            <li><a href= "/contact-page/contact.html">Contact me!</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/skills-page/skills.html">Skills</a></li>
+            <li><a href="/experience-page/experience.html">Experience</a></li>
+            <li><a href="/contact-page/contact.html">Contact me!</a></li>
         </ul>
         <div class="hamburger" onclick="toggleDropdown()">
             <span>&#9776;</span>
@@ -21,42 +22,57 @@
     </nav>
     <div class="dropdown" id="dropdown">
         <ul>
-            <li><a href= "/index.html">Home</a></li>
-            <li><a href= "/skills-page/skills.html">Skills</a></li>
-            <li><a href= "/experience-page/experience.html">Experience</a></li>
-            <li><a href= "/contact-page/contact.html">Contact me!</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/skills-page/skills.html">Skills</a></li>
+            <li><a href="/experience-page/experience.html">Experience</a></li>
+            <li><a href="/contact-page/contact.html">Contact me!</a></li>
         </ul>
     </div>
     <div id="container">
-
-        <div id='projects-container'>
-            <div id="boids" class='item'>
-                <h3>Natural flocking simulation (Now ported to JavaScipt!)</h3>
+        <div id="card-placement">
+        </div>
+        <div id="card-home">
+            <div id="boids" class='card'><h3>Natural flocking simulation (Now ported to JavaScipt!)</h3>
                 <p>Similar to Conways Game of Life, Boids is a artifical life program.
                     first developed in 1986, it simulates the flocking behaviour of birds, schools of fish, etc.</p>
-
+    
                 <p> Using the p5.js library I ported my orginal python version of the algorithm into
-                    javascript so youm the reader, can check it out without any downloads!</p>
-                    <div id="boids-sub"style="width: 100%; height: 50vh;">
+                    javascript so youm the reader, can <a href = "/projects/p5/boids.html">check </a>it out without any downloads!</p>
+                    <div id="boids-sub">
                         <script src="/scripts/embedboids/p5/boids.js"></script>
-                        <script src = "/scripts/embedboids/p5/sketch.js"></script>
+                        <script src="/scripts/embedboids/p5/sketch.js"></script>
                     </div>
                 <p>Click <a href="/projects/p5/boids.html">here</a> to make it interactive!</p>
-              
-                </div>
-                <div id="grade-calculator" class='item'>
+            </div>
+            
+
+
+            <div id="calcuator" class="card">
                 <h3>Grade calculator using selenium in python</h3>
                 <p>Selenium is a popular browser automation tool with support in C#, Ruby, Java, Python, and JavaScript.</p>
                 <p>Using the selenium library in Python I created a web scraper for Brightspace that automates microsoft login, data entry,
-                <p>Download it here <a href="./projects/grade-calc/gradecalculator.zip/"
-                        download="gradecalculator.zip">here</a></p>
-                <p>Or at my <a href="https://github.com/JamieWatton32/BrightspaceScraper" id="boids-link">Github</a></p>
+                <p>Download it  <a href="./projects/grade-calc/gradecalculator.zip/" download="gradecalculator.zip">here</a>
+                    Or at my <a href="https://github.com/JamieWatton32/BrightspaceScraper">Github</a></p>
+                
             </div>
-          
+            <div id="fluidized" class="card">
+                <h3>Natural flocking simulation (Now ported to JavaScipt!)</h3>
+                <p>Similar to Conways Game of Life, Boids is a artifical life program.
+                    first develop</p>
+            </div>
+            <div id='website' class='card'>
+                <h3>This website!</h3>
+                <p>I like to think this website is an accomplishment, I mean it does everything right, dyanmically updating html, a embedded program, heck, you got me to 
+                 start learning the worse language of all, Javascript, for this. I personally think it deserves the above and beyond treatment.</p>
+                <p>click <a href = "../index.html">here</a> to go back to the home page and start the journey all over again</p> 
+            </div>
+
         </div>
     </div>
-<script src = "/scripts/toggleDropdown.js"></script>
 
+    <script src='../scripts/moveDiv.js'></script>
+    <script src='../scripts/toggleDiv.js'></script>
+    <script src="../scripts/toggleDropdown.js"></script>
 </body>
 
 </html>

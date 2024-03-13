@@ -193,6 +193,29 @@ nav ul li button  {
         height: fit-content;
         margin: auto;
     }
+    #card-placement >#about-container >p {
+        font-size: 14px;
+    }
+    #card-placement >#experience-container >h2 {
+        font-size: 15px;
+    }
+    #card-placement >#experience-container >ul {
+        padding: 0;
+        list-style: none;
+    }
+    #card-placement >#experience-container >ul>ul {
+        list-style:inside;
+    }
+    #card-placement >#experience-container >p:first-child {
+        margin-top:16px;
+    }
+    #card-placement >#projects-container >ul {
+        list-style: inside;
+        padding:0;
+       
+    }
+   
+
 }
 /*small devices (phones, 600px and down) (IPhone SE) */
 @media only screen and (min-width: 401px) and (max-width: 600px){
