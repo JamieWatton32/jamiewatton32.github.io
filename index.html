@@ -31,84 +31,49 @@
 
         </ul>
     </div>
+
+
     <div id="container">
-        <div id="about-container">
-            <!-- <div class="image-container">
-                    <img src="./images/mydawg.png" alt="Picture of a dog">
-                </div> -->
-            <div id="about" class="item">
+        <div id="card-placement" >
+        </div>
+        <div id = "card-home">
+            <div  id = "about-container" class = "card">
                 <h2>About Me</h2>
                 <p>Hi My name is Jamie! I am chemical engineering graduate from Dalhousie University. I am a
                     problem-solver by nature and have astrong eye for detail. On top of my engineering degree I am
                     pursuing a diploma in IT programming from Nova Scotia Community College. I bring the skill set of an
                     engineer mixed with the mind set of a programmer to create practical applications for real-use.</p>
             </div>
+        <div id = "skills-container" class="card">
+            <h2>Skills</h2>
+            <ul>
+                <li>Skilled in Python 3.8+</li>
+                <li>Proficient in database administration</li>
+                <li>Understanding in CSS3 and HTML5</li>
+                <li>Familiarity in Windows administration</li>
+                <li>Knowledgeable in computer networking</li>
+                <li>Proficient in Microsoft 365</li>
+                <li>Beginner in JavaScript</li>
+            </ul>
         </div>
-        <div id=skills-container>
-            <div id="skills" class="item">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Skilled in Python 3.8+</li>
-                    <li>Proficient in database administration</li>
-                    <li>Understanding in CSS3 and HTML5</li>
-                    <li>Familiarity in Windows administration</li>
-                    <li>Knowledgeable in computer networking</li>
-                    <li>Proficient in Microsoft 365</li>
-                    <li>Beginner in JavaScript</li>
-                    <li>Skill in Aspen HYSYS</li>
-                    <li>Proficient in COMSOL Multiphysics</li>
-                    <li>Skilled using MATLAB</li>
-                    <li>SKilled in Solidworks</li>
-                </ul>
-            </div>
+        <div id = "experience-container" class="card">
+            <h2>Work Experience</h2>
+            <p>Position: Web Developer</p>
+            <p>Company: ABC Corp</p>
+            <p>Date: January 2020 - Present</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada velit eu ligula
+                fermentum, ac bibendum magna vestibulum. Donec auctor sit amet est eget bibendum.</p>
         </div>
-
-        <div id='experience-container'>
-            <div id="experience" class="item">
-                <h2>Work Experience</h2>
-                <p>Position: Web Developer</p>
-                <p>Company: ABC Corp</p>
-                <p>Date: January 2020 - Present</p>
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada velit eu ligula
-                    fermentum, ac bibendum magna vestibulum. Donec auctor sit amet est eget bibendum.</p>
-            </div>
-        </div>
-
-        <div id="contact-container">
-            <div id="contact" class="item">
-                <p>This is a place holder</p>
+        <div id='projects-container' class='card'>
+            <h2>Projects</h2>
+            <ul>
+                <li>boids</li>
+                <li>grades</li>
+                <li>website</li>
+            </ul>
             </div>
         </div>
-
-        <div id='projects-container'>
-            <div id="boids" class='item'>
-                <h3>Natural flocking simulation (Now ported to JavaScipt!)</h3>
-                <p>Similar to Conways Game of Life, Boids is a artifical life program.
-                    first developed in 1986, it simulates the flocking behaviour of birds, schools of fish, etc.</p>
-
-                <p> Using the p5.js library I ported my orginal python version of the algorithm into
-                    javascript so youm the reader, can check it out without any downloads!</p>
-                <p>Click <a href="./projects/projects.html">here</a> to see learn more
-                    algorithm and some pseudocode. </p>
-            </div>
-            <div id="grade-calculator" class='item'>
-                <h3>Grade calculator using selenium in python</h3>
-                <p>Selenium is a popular browser automation tool with support in C#, Ruby, Java, Python, and JavaScript.</p>
-                <p>Using the selenium library in Python I created a web scraper for Brightspace that automates microsoft login, data entry,
-                    and analysis in order to automate the process of determining a individuals grades.</p> 
-                </p>
-                <p>Download it here <a href="./projects/grade-calc/gradecalculator.zip/"
-                        download="gradecalculator.zip">here</a></p>
-                <p>Or at my <a href="https://github.com/JamieWatton32/BrightspaceScraper" id="boids-link">Github</a></p>
-                </p>
-            </div>
-            <div id="-website" class='item'>
-                <h3>This website of course!</h3>
-                <p>text goes here</p>
-            </div>
-
-        </div>
-    </div>
+    <script src = './scripts/moveDiv.js'></script>
     <script src='./scripts/toggleDiv.js'></script>
     <script src='./scripts/preventmobile.js'></script>
     <script src="./scripts/toggleDropdown.js"></script>

@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: lightcyan;
+    background-color: #0a693d;
 }
 a:visited{
     color: rgba(0, 0, 0, 0.199);
@@ -20,7 +20,7 @@ a:hover{
     justify-content: space-between;
 }
 nav {
-    background-color: #333;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +70,7 @@ nav ul li a {
     display: none; 
     top: 100%;
     left: 0;
-    background-color: #ffffff00;
+    background-color: white;
 }
 
 .dropdown ul {
@@ -85,9 +85,8 @@ nav ul li a {
 }
 
 .dropdown ul li a {
-    color: #fff;
     text-decoration: none;
-    color: #000000;
+    color: white;
     text-decoration: none;
     background: none;
     border: none;
