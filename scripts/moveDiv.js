@@ -11,34 +11,31 @@ document.addEventListener("DOMContentLoaded", function () {
         // Add click event listener to each card
         card.addEventListener('click', function () {
             // Clone the clicked card
-            // console.log("previous card is:",previousCard)
-            // console.log("current card is:" ,card);
             const clonedCard = this.cloneNode(true);
+            console.log(clonedCard);
            
             // Check if there's an existing card in the container
             const existingCard = cardPlacement.querySelector('.card');
-            if (previousCard !== null && previousCard !== clonedCard) {
-             
-                previousCard.style.visibility = "visible";
-            }
-            // console.log("existingCard:",existingCard)
+        
+            console.log("existingCard:",existingCard)
             card.style.visibility = "hidden";
-
             // If there's an existing card, remove it
             if (existingCard) {
-                previousCard.style.visibility = "visible";
                 cardPlacement.removeChild(existingCard);
             }
 
             // Check if the cloned card is different from the existing card
-            if (existingCard !== clonedCard) {
-
+            if (existingCard != clonedCard) {
+                
                 const hiddenCard = document.getElementById('card-home');
-              
-                for (i in hiddenCard.children.length){
-                   
-                    if (hiddenCard.children.style.visibility == "hidden"){
-                        console.log(hiddenCard.children.style.visibility)
+                var children = hiddenCard.children;
+                //Loops through the children of "card-home" in order to set their visiblities back to "visible". 
+                //This fixes an issue where they were staying hidden when removing one by clicking another. 
+                for (var i = 0; i<children.length; i++){
+                    var table = children[i]
+                    console.log("table:",table.style.visibility);
+                    if (table.style.visibility == "hidden"){
+                        table.style.visibility = "visible";
                     };
                 }; 
                 
@@ -47,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Append the cloned card to the container
                 cardPlacement.appendChild(clonedCard);
                 card.style.visibility = "hidden";
+               
                 // Set the height of the cloned card to 100% of its parent's height
                 clonedCard.style.height = "100%";
                 // Add click event listener to the cloned card
