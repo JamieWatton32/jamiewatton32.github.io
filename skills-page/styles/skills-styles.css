@@ -114,6 +114,7 @@ nav ul li button  {
 #card-home .card{
     background-image: url(/images/playing-card.jpg);
 }
+
 @media only screen and (min-width: 300px) and (max-width: 400px){
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
@@ -126,6 +127,7 @@ nav ul li button  {
         overflow-y: scroll;
         overflow-x: hidden;
     }
+
     .hamburger {
         display: block;
         
@@ -168,12 +170,7 @@ nav ul li button  {
         text-align: center;
     
     }
-    .card{
-        display: flex;
-        flex-wrap: wrap;
-        transition: height 0.3s ease;
-        border: 2px dashed rgba(255,255,255,.5);
-    }
+  
     .card h2{
         text-align: center;
     }
@@ -193,10 +190,12 @@ nav ul li button  {
         display:none;
     }
     #card-home .card{
+        display:flex;
         background-color: white;
         margin:0.5vh;
         width:12.5vh;
         height:25vh;
+        flex-wrap: none;
     }
     #card-home >.card > h2{
         position: relative;
@@ -206,9 +205,11 @@ nav ul li button  {
     }
     #card-placement >.card > h2 {
         font-size: 16px;
-        margin:auto;
     }
-    
+    .card{
+        transition: height 0.3s ease;
+        border: 2px dashed rgba(255,255,255,.5);
+    }
    
 
 }
