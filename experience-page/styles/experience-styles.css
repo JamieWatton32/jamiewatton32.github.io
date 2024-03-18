@@ -110,11 +110,7 @@ nav ul li button  {
     box-shadow: 0 0 10px rgba(15, 15, 15, 0.521);
     margin:auto;
     
-}
-#card-home .card{
-    background-image: url(/images/playing-card.jpg);
-}
-
+    }
 @media only screen and (min-width: 300px) and (max-width: 400px){
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
@@ -128,7 +124,6 @@ nav ul li button  {
         overflow-x: hidden;
         display:block;
     }
-
     .hamburger {
         display: block;
         
@@ -171,7 +166,12 @@ nav ul li button  {
         text-align: center;
     
     }
-  
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        transition: height 0.3s ease;
+        border: 2px dashed rgba(255,255,255,.5);
+    }
     .card h2{
         text-align: center;
     }
@@ -191,26 +191,23 @@ nav ul li button  {
         display:none;
     }
     #card-home .card{
-        display:flex;
+        background-image: url(../images/playing-card.jpg);
         background-color: white;
         margin:0.5vh;
         width:12.5vh;
         height:25vh;
-        flex-wrap: nowrap;
     }
     #card-home >.card > h2{
         position: relative;
-        font-size: 14px;
-        height: fit-content;
+        font-size: 16px;
+        height: 16px;
         margin: auto;
     }
     #card-placement >.card > h2 {
         font-size: 16px;
+        height:fit-content;
     }
-    .card{
-        transition: height 0.3s ease;
-        border: 2px dashed rgba(255,255,255,.5);
-    }
+    
    
 
 }
@@ -277,12 +274,13 @@ nav ul li button  {
         display:none;
     }
     #card-home .card{
-       
+        background-image: url(../images/playing-card.jpg);
         background-color: white;
         display: flex;
         margin:0.5vh;
         width:12.5vh;
         height:25vh;
+        flex-wrap: nowrap;
     }
     #card-home >.card > h2{
         position: relative;
