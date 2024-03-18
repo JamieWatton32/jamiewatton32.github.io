@@ -1,0 +1,324 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a693d;
+}
+a:visited{
+    color: rgba(0, 0, 0, 0.199);
+    bottom: none;
+}
+a:hover{
+    color: #f77070be;
+}
+.center-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between; 
+    position: relative;
+    text-align: center;
+    color: #000000;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; 
+}
+
+nav ul li {
+    margin-right: 10px; 
+}
+
+nav ul li:last-child {
+    margin-right: 0; 
+}
+
+nav ul li button  {
+    display: block;
+    color: black;
+    padding: 15px 20px;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+#container {
+    height:auto;
+    margin: auto;
+    padding: 20px;
+    display:grid;
+    gap: 20px;
+    font:600;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size:36px;
+}
+
+/* Drop-down menu styling */
+.dropdown {
+    display: none; 
+    top: 100%;
+    left: 0;
+    background-color: #ffffff00;
+}
+.dropdown ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+.dropdown ul li {
+    padding: 10px 10px; /* Adjust the padding as needed */
+    text-align: center;
+}
+
+.dropdown ul li button {
+    color: #fff;
+    text-decoration: none;
+    color: #000000;
+    text-decoration: none;
+    background: none;
+    border: none;
+   
+}
+#card-placement{
+    background-color: none;
+    border: 5px dashed rgba(255,255,255,.5);
+    border-radius: 15px;
+    overflow: hidden;
+    max-height: max-content;
+    min-height: 10vh;
+}
+#card-home{
+    overflow: hidden;
+}
+.card {
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(15, 15, 15, 0.521);
+    margin:auto;
+}
+   
+#card-home >.card>form{
+    display:none;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 400px){
+    #card-placement{
+        border: 5px dashed rgba(255,255,255,.5);
+        border-radius: 15px;
+        width:65%;
+        height:45vh;
+        margin: auto;
+    }
+    #card-placement .card{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display:block;
+    }
+    .hamburger {
+        display: block;
+        
+    }
+    .hamburger span {
+        padding-left: 20px;
+        
+    }
+    nav ul {
+        display: none; 
+        
+    }
+    .dropdown {
+        display: none; 
+        position: relative;
+
+    }
+    .dropdown.active{
+        display: block;
+    
+    }
+    .dropdown ul{
+        padding:10px
+    }
+    .dropdown li{
+        border: 2px solid #000000;
+        text-align: center;
+        grid-template-rows: repeat(auto-fit, minmax(screen, 1fr));
+        border-bottom: 0;
+        
+    }
+    .dropdown li:last-child{
+        border-bottom: 2px solid #000000;
+    }
+    .dropdown ul li button {
+        
+        font-size: 20px;
+        font-weight: bold;
+        padding:0;
+        text-align: center;
+    
+    }
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        transition: height 0.3s ease;
+        border: 2px dashed rgba(255,255,255,.5);
+    }
+    .card h2{
+        text-align: center;
+    }
+    #card-home {
+        display: flex;
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+    }
+    #card-home p{
+        display:none;
+    }
+    #card-home ul{
+        display:none;
+    }
+    #card-home .card{
+        background-image: url(../images/playing-card.jpg);
+        background-color: white;
+        margin:0.5vh;
+        width:12.5vh;
+        height:25vh;
+    }
+    #card-home >.card > h2{
+        position: relative;
+        font-size:14px;
+        height: fit-content;
+        margin: auto;
+        flex-wrap: wrap;
+        display: flex;
+    }
+    #card-placement >.card > h2 {
+        font-size: 16px;
+        height:fit-content;
+    }
+    
+}
+/*small devices (phones, 600px and down) (IPhone SE) */
+@media only screen and (min-width: 401px) and (max-width: 600px){
+
+    .hamburger {
+        display: block;
+        
+    }
+    .hamburger span {
+        padding-left: 20px;
+      
+    }
+    nav ul {
+        display: none; 
+        
+    }
+    .dropdown {
+        display: none; 
+        position: relative;
+
+    }
+    .dropdown.active{
+        display: block;
+    
+    }
+    .dropdown ul{
+        padding:10px
+    }
+    .dropdown li{
+        border: 2px solid #000000;
+        text-align: center;
+        grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
+        border-bottom: 0;
+       
+    }
+    .dropdown li:last-child{
+        border-bottom: 2px solid #000000;
+    }
+    .dropdown ul li button {
+      
+        font-size: 20px;
+        font-weight: bold;
+        padding:0;
+        text-align: center;
+    
+    }
+    .card h2{
+        text-align: center;
+    }
+    #card-home {
+        display: flex;
+        position: fixed;
+        top: 70vh;
+        overflow: hidden;
+        text-align: center;
+        max-width: 100%;
+    }
+    #card-home p{
+        display:none;
+    }
+    #card-home ul{
+        display:none;
+    }
+    #card-home .card{
+        background-image: url(../images/playing-card.jpg);
+        background-color: white;
+        display: flex;
+        margin:0.5vh;
+        width:12.5vh;
+        height:25vh;
+        flex-wrap: nowrap;
+    }
+    #card-home >.card > h2{
+        position: relative;
+        font-size: 16px;
+        height: fit-content;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    #container{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    } 
+    .hamburger {
+        display: none;
+    }
+    
+}
+@media only screen and (min-width: 768px) and (max-width:991px){
+    #container{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    } 
+  
+}
+@media only screen and (min-width: 992px) and (max-width:1199px){
+    #container{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    } 
+ 
+}
+@media only screen and (min-width: 1200px){
+
+    nav ul li:last-child{
+        padding-right: 30px;
+    }
+
+}
