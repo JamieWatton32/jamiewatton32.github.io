@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects Page</title>
+<link rel="stylesheet" href="./styles/skills-styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/skills-page/skills.html">Skills</a></li>
+            <li><a href="/experience-page/experience.html">Experience</a></li>
+            <li><a href="/contact-page/contact.html">Contact me!</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleDropdown()">
+            <span>&#9776;</span>
+        </div>
+    </nav>
+    <div class="dropdown" id="dropdown">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/skills-page/skills.html">Skills</a></li>
+            <li><a href="/experience-page/experience.html">Experience</a></li>
+            <li><a href="/contact-page/contact.html">Contact me!</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div id="card-placement">
+        </div>
+        <div id="card-home">
+            <div id="skill-1" class='card'>
+                <h2>Python programming language</h2><br/><br/>
+                <p>I am at a beginner to intermediate level in python, 3.8+. Using this i have created several 
+                    personal projects, and performmed at a high level in academic classes.</p>
+
+                <p>Click <a href="https://github.com/JamieWatton32">here</a> to check out my Github!</p>
+            </div>
+
+
+
+            <div id="skill-2" class="card">
+                <h2>Proficient in databases</h2><br/><br/>
+                <p>I am proficient in working i nand building rudimentary databases for smaller programs and applications. Primarily
+                    using mariaDB and using jetbrains DataGrip as an IDE. I have plans to implement some of my own over this summer as well!</p> 
+            
+            </div>
+            <div id="skill-3" class="card">
+                <h2>CSS & HTML</h2><br/><br/>
+                <p>As seen by this website I have some knowledge in usign CSS and html to build responsive websites. Additionally I
+                    I have dabbled in javascript in order to add more functionality to my sites!
+                </p>
+            </div>
+            <div id='skill-4' class='card'>
+                <h2>Matlab</h2><br/><br/>
+                <p>Hailing from my engineering background I have had the pleasure to utilize Matlab many times for scientific computing
+                    and data analysis. Additionally thanks to this I am familar with pythons Matlab engine API!</p>
+            </div>
+            <div id='skill-5' class='card'>
+                <h2>Quick learning</h2><br/><br/>
+                <p>I am able to proficiently grasp complex concepts and procedures with ease, 
+                    allowing for me to rapidly integrate them into practical applications.</p>
+               
+            </div>
+            <div id='skill-6' class='card'>
+                <h2>This website!</h2>
+                <p>I like to think this website is an accomplishment, I mean it does everything right, dyanmically
+                    updating html, a embedded program, heck, you got me to
+                    start learning the worse language of all, Javascript, for this. I personally think it deserves the
+                    above and beyond treatment.</p>
+                <p>click <a href="../index.html">here</a> to go back to the home page and start the journey all over
+                    again</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src='../scripts/moveDiv.js'></script>
+    <script src='../scripts/toggleDiv.js'></script>
+    <script src="../scripts/toggleDropdown.js"></script>
+</body>
+
+</html>
