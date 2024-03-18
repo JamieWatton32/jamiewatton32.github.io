@@ -12,17 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
         card.addEventListener('click', function () {
             // Clone the clicked card
             const clonedCard = this.cloneNode(true);
-            console.log(clonedCard);
+            
            
             // Check if there's an existing card in the container
             const existingCard = cardPlacement.querySelector('.card');
-        
-            console.log("existingCard:",existingCard)
+            console.log("existingCardL",existingCard);
+          
             card.style.visibility = "hidden";
             // If there's an existing card, remove it
             if (existingCard) {
                 cardPlacement.removeChild(existingCard);
-            }
+            };
 
             // Check if the cloned card is different from the existing card
             if (existingCard != clonedCard) {
@@ -49,6 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 clonedCard.style.height = "100%";
                 // Add click event listener to the cloned card
                 clonedCard.addEventListener('click', function () {
+                    if (clonedCard.id === 'contact-form') {
+                        
+                        return;
+                    }
                     card.style.visibility = "visible";
                     // Remove the cloned card when clicked
                     cardPlacement.removeChild(clonedCard);
@@ -58,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 previousCard = clonedCard;
               
                
-            }
+            };
         });
     });
 });
