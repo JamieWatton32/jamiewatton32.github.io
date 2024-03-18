@@ -108,9 +108,23 @@ nav ul li button  {
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(15, 15, 15, 0.521);
+    margin:auto;    
+}
+#card-placement> p{
+    width:100%;
+    height:100%;
+    display: flex;
     margin:auto;
-    
-    }
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    z-index: 1;
+    font-size: xx-large;
+    color:#a7a7a7;
+}
+#card-placement .card{
+    z-index: 2;
+}
 @media only screen and (min-width: 300px) and (max-width: 400px){
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);

@@ -96,7 +96,7 @@ nav ul li button  {
     background-color: none;
     border: 5px dashed rgba(255,255,255,.5);
     border-radius: 15px;
-    overflow: hidden;
+    overflow: scroll;
     max-height: max-content;
     min-height: 10vh;
 }
@@ -111,14 +111,35 @@ nav ul li button  {
     margin:auto;
     
     }
+#card-placement> p{
+    width:100%;
+    height:100%;
+    display: flex;
+    margin:auto;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    z-index: 1;
+    font-size: xx-large;
+    color:#a7a7a7;
+}
+#card-placement .card{
+    z-index: 2;
+}
 @media only screen and (min-width: 300px) and (max-width: 400px){
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
         border-radius: 15px;
-        width:65%;
-        height:45vh;
+        width: 65%;
+        height: 45vh;
         margin: auto;
+      }
+      #card-placement .card{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display:block;
     }
+    
     .hamburger {
         display: block;
         
@@ -185,13 +206,14 @@ nav ul li button  {
     #card-home ul{
         display:none;
     }
-    #card-home .card{
+    #card-home >.card{
         background-image: url(../images/playing-card.jpg);
         background-color: white;
         display: flex;
         margin:0.5vh;
         width:12.5vh;
         height:25vh;
+        flex-wrap: nowrap;
     }
     #card-home >.card > h2{
         position: relative;

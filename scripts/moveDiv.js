@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.addEventListener('click', function () {
             // Clone the clicked card
             const clonedCard = this.cloneNode(true);
-            
+            const hideText = cardPlacement.querySelector("p");
            
             // Check if there's an existing card in the container
             const existingCard = cardPlacement.querySelector('.card');
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 //This fixes an issue where they were staying hidden when removing one by clicking another. 
                 for (var i = 0; i<children.length; i++){
                     var table = children[i]
-                    console.log("table:",table.style.visibility);
+                    ;
                     if (table.style.visibility == "hidden"){
                         table.style.visibility = "visible";
                     };
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Append the cloned card to the container
                 cardPlacement.appendChild(clonedCard);
                 card.style.visibility = "hidden";
-               
+                hideText.style.display="none";
                 // Set the height of the cloned card to 100% of its parent's height
                 clonedCard.style.height = "100%";
                 // Add click event listener to the cloned card
@@ -53,11 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         
                         return;
                     }
+                    
                     card.style.visibility = "visible";
+                    
                     // Remove the cloned card when clicked
                     cardPlacement.removeChild(clonedCard);
+                    hideText.style.display='flex';
                 });
-
+                
                 // Update the previousCard reference to the current cloned card
                 previousCard = clonedCard;
               
