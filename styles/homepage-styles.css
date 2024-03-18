@@ -4,9 +4,12 @@ body {
     padding: 0;
     background-color: #0a693d;
 }
+a{
+    text-decoration: none;
+}
 a:visited{
-    color: rgba(0, 0, 0, 0.199);
-    bottom: none;
+    color:black;
+    
 }
 a:hover{
     color: #f77070be;
@@ -23,6 +26,7 @@ nav {
     position: relative;
     text-align: center;
     color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav ul {
@@ -126,11 +130,14 @@ nav ul li button  {
 #card-placement .card{
     z-index: 2;
 }
+#card-place .card ul li{
+    list-style: none;
+}
 @media only screen and (min-width: 300px) and (max-width: 400px){
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
         border-radius: 15px;
-        width: 65%;
+        width: 30vh;
         height: 45vh;
         margin: auto;
       }
@@ -246,15 +253,28 @@ nav ul li button  {
 
 }
 /*small devices (phones, 600px and down) (IPhone SE) */
-@media only screen and (min-width: 401px) and (max-width: 600px){
+@media only screen and (min-width: 401px) and (max-width: 600px) and (max-height:928px){
 
+    #card-placement{
+        border: 5px dashed rgba(255,255,255,.5);
+        border-radius: 15px;
+        width: 30vh;
+        height: 45vh;
+        margin: auto;
+      }
+      #card-placement .card{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display:block;
+    }
+    
     .hamburger {
         display: block;
         
     }
     .hamburger span {
         padding-left: 20px;
-      
+        
     }
     nav ul {
         display: none; 
@@ -275,31 +295,38 @@ nav ul li button  {
     .dropdown li{
         border: 2px solid #000000;
         text-align: center;
-        grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(screen, 1fr));
         border-bottom: 0;
-       
+        
     }
     .dropdown li:last-child{
         border-bottom: 2px solid #000000;
     }
     .dropdown ul li button {
-      
+        
         font-size: 20px;
         font-weight: bold;
         padding:0;
         text-align: center;
     
     }
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        transition: height 0.3s ease;
+        border: 2px dashed rgba(255,255,255,.5);
+    }
     .card h2{
         text-align: center;
     }
     #card-home {
         display: flex;
-        position: fixed;
-        top: 70vh;
-        overflow: hidden;
+        position: relative;
         text-align: center;
         max-width: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
     }
     #card-home p{
         display:none;
@@ -307,13 +334,14 @@ nav ul li button  {
     #card-home ul{
         display:none;
     }
-    #card-home .card{
+    #card-home >.card{
         background-image: url(../images/playing-card.jpg);
         background-color: white;
         display: flex;
         margin:0.5vh;
-        width:12.5vh;
-        height:25vh;
+        width:10vh;
+        height:20vh;
+        flex-wrap: nowrap;
     }
     #card-home >.card > h2{
         position: relative;
@@ -321,33 +349,360 @@ nav ul li button  {
         height: fit-content;
         margin: auto;
     }
+    #card-placement >#about-container >p {
+        font-size: 14px;
+    }
+    #card-placement >#experience-container >h2 {
+        font-size: 15px;
+    }
+    #card-placement >#experience-container >ul {
+        padding: 0;
+        list-style: none;
+    }
+    #card-placement >#experience-container >ul>ul {
+        list-style:inside;
+    }
+    #card-placement >#experience-container >p:first-child {
+        margin-top:16px;
+    }
+    #card-placement >#projects-container >ul {
+        list-style: inside;
+        padding:0;
+       
+    }
+   
+
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px){
-    #container{
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    } 
-    .hamburger {
-        display: none;
+    #card-placement{
+        border: 5px dashed rgba(255,255,255,.5);
+        border-radius: 15px;
+        width: 30vh;
+        height: 45vh;
+        margin: auto;
+      }
+      #card-placement .card{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display:block;
     }
-    
+    nav{
+        height:3vh;
+    }
+    nav ul {
+        display: flex; 
+        
+    }
+   
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        transition: height 0.3s ease;
+        border: 2px dashed rgba(255,255,255,.5);
+    }
+    .card h2{
+        text-align: center;
+    }
+    #card-home {
+        display: flex;
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+    }
+    #card-home p{
+        display:none;
+    }
+    #card-home ul{
+        display:none;
+    }
+    #card-home >.card{
+        background-image: url(../images/playing-card.jpg);
+        background-color: white;
+        display: flex;
+        margin:0.5vh;
+        width:12.5vh;
+        height:20vh;
+        flex-wrap: nowrap;
+    }
+    #card-home >.card > h2{
+        position: relative;
+        font-size: 16px;
+        height: fit-content;
+        margin: auto;
+    }
+    #card-placement >#about-container >p {
+        font-size: 14px;
+    }
+    #card-placement >#experience-container >h2 {
+        font-size: 15px;
+    }
+    #card-placement >#experience-container >ul {
+        padding: 0;
+        list-style: none;
+    }
+    #card-placement >#experience-container >ul>ul {
+        list-style:inside;
+    }
+    #card-placement >#experience-container >p:first-child {
+        margin-top:16px;
+    }
+    #card-placement >#projects-container >ul {
+        list-style: inside;
+        padding:0;
+       
+    }
+   
+
 }
 @media only screen and (min-width: 768px) and (max-width:991px){
     #container{
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    } 
-  
+        display:flex;
+        height:100%;
+    }
+    #card-placement{
+        border: 5px dashed rgba(255,255,255,.5);
+        border-radius: 15px;
+        width: 30vh;
+        height: 60vh;
+      }
+      #card-placement .card{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display:block;
+    }
+    
+    nav ul {
+        display: flex;  
+    }
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        transition: height 0.3s ease;
+        border: 2px dashed rgba(255,255,255,.5);
+    }
+    .card h2{
+        text-align: center;
+    }
+    #card-home {
+        display: flex;
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+        float: right;
+        margin: auto;
+    }
+    #card-home p{
+        display:none;
+    }
+    #card-home ul{
+        display:none;
+    }
+    #card-home >.card{
+        background-image: url(../images/playing-card.jpg);
+        background-color: white;
+
+        margin:0.5vh;
+        width:10vh;
+        height:20vh;
+        flex-wrap: nowrap;
+    }
+    #card-home >.card > h2{
+        position: relative;
+        font-size: 16px;
+        height: fit-content;
+        margin: auto;
+    }
+    #card-placement >#about-container >p {
+        font-size: 14px;
+    }
+    #card-placement >#experience-container >h2 {
+        font-size: 15px;
+    }
+    #card-placement >#experience-container >ul {
+        padding: 0;
+        list-style: none;
+    }
+    #card-placement >#experience-container >ul>ul {
+        list-style:inside;
+    }
+    #card-placement >#experience-container >p:first-child {
+        margin-top:16px;
+    }
+    #card-placement >#projects-container >ul {
+        list-style: inside;
+        padding:0;
+       
+    }
+   
 }
 @media only screen and (min-width: 992px) and (max-width:1199px){
-    #container{
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    } 
- 
+    #card-placement{
+        border: 5px dashed rgba(255,255,255,.5);
+        border-radius: 15px;
+        width: 65%;
+        height: 45vh;
+        margin: auto;
+      }
+      #card-placement .card{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display:block;
+    }
+    
+    
+    nav ul {
+        display: flex; 
+        
+    }
+   
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        transition: height 0.3s ease;
+        border: 2px dashed rgba(255,255,255,.5);
+    }
+    .card h2{
+        text-align: center;
+    }
+    #card-home {
+        display: flex;
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+    }
+    #card-home p{
+        display:none;
+    }
+    #card-home ul{
+        display:none;
+    }
+    #card-home >.card{
+        background-image: url(../images/playing-card.jpg);
+        background-color: white;
+        display: flex;
+        margin:0.5vh;
+        width:10vh;
+        height:20vh;
+        flex-wrap: nowrap;
+    }
+    #card-home >.card > h2{
+        position: relative;
+        font-size: 16px;
+        height: fit-content;
+        margin: auto;
+    }
+    #card-placement >#about-container >p {
+        font-size: 14px;
+    }
+    #card-placement >#experience-container >h2 {
+        font-size: 15px;
+    }
+    #card-placement >#experience-container >ul {
+        padding: 0;
+        list-style: none;
+    }
+    #card-placement >#experience-container >ul>ul {
+        list-style:inside;
+    }
+    #card-placement >#experience-container >p:first-child {
+        margin-top:16px;
+    }
+    #card-placement >#projects-container >ul {
+        list-style: inside;
+        padding:0;
+       
+    }
+   
 }
 @media only screen and (min-width: 1200px){
-
-    nav ul li:last-child{
-        padding-right: 30px;
+    #card-placement{
+        border: 5px dashed rgba(255,255,255,.5);
+        border-radius: 15px;
+        width: 65%;
+        height: 45vh;
+        margin: auto;
+      }
+      #card-placement .card{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display:block;
     }
-
+    
+    
+    nav ul {
+        display: flex; 
+        
+    }
+    
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        transition: height 0.3s ease;
+        border: 2px dashed rgba(255,255,255,.5);
+    }
+    .card h2{
+        text-align: center;
+    }
+    #card-home {
+        display: flex;
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+    }
+    #card-home p{
+        display:none;
+    }
+    #card-home ul{
+        display:none;
+    }
+    #card-home >.card{
+        background-image: url(../images/playing-card.jpg);
+        background-color: white;
+        display: flex;
+        margin:0.5vh;
+        width:10vh;
+        height:20vh;
+        flex-wrap: nowrap;
+    }
+    #card-home >.card > h2{
+        position: relative;
+        font-size: 16px;
+        height: fit-content;
+        margin: auto;
+    }
+    #card-placement >#about-container >p {
+        font-size: 14px;
+    }
+    #card-placement >#experience-container >h2 {
+        font-size: 15px;
+    }
+    #card-placement >#experience-container >ul {
+        padding: 0;
+        list-style: none;
+    }
+    #card-placement >#experience-container >ul>ul {
+        list-style:inside;
+    }
+    #card-placement >#experience-container >p:first-child {
+        margin-top:16px;
+    }
+    #card-placement >#projects-container >ul {
+        list-style: inside;
+        padding:0;
+       
+    }
+   
 }
