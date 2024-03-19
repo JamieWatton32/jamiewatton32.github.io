@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0a693d;
+    height:100%
 }
 a{
     text-decoration: none;
@@ -459,6 +460,7 @@ nav ul li button  {
 
 }
 @media only screen and (min-width: 768px) and (max-width:991px){
+
     #container{
         display:flex;
         height:100%;
@@ -466,8 +468,11 @@ nav ul li button  {
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
         border-radius: 15px;
-        width: 30vh;
+        width:55vh;
         height: 60vh;
+        margin:auto;
+        margin-top: 11vh;
+        margin-left: 3vh;
       }
       #card-placement .card{
         overflow-y: scroll;
@@ -492,11 +497,13 @@ nav ul li button  {
         position: relative;
         text-align: center;
         max-width: 100%;
-        flex-wrap: wrap;
+        flex-wrap:wrap;
         overflow: hidden;
         justify-content: center;
         float: right;
         margin: auto;
+        margin: auto;
+        margin-top: 10vh;
     }
     #card-home p{
         display:none;
@@ -507,10 +514,9 @@ nav ul li button  {
     #card-home >.card{
         background-image: url(../images/playing-card.jpg);
         background-color: white;
-
-        margin:0.5vh;
-        width:10vh;
-        height:20vh;
+        margin:3vh;
+        width:15vh;
+        height:25vh;
         flex-wrap: nowrap;
     }
     #card-home >.card > h2{
@@ -543,12 +549,19 @@ nav ul li button  {
    
 }
 @media only screen and (min-width: 992px) and (max-width:1199px){
+    
+    #container{
+        display:flex;
+        height:100%;
+    }
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
         border-radius: 15px;
-        width: 65%;
-        height: 45vh;
-        margin: auto;
+        width:55vh;
+        height: 60vh;
+        margin:auto;
+        margin-top: 11vh;
+        margin-left: 3vh;
       }
       #card-placement .card{
         overflow-y: scroll;
@@ -556,12 +569,9 @@ nav ul li button  {
         display:block;
     }
     
-    
     nav ul {
-        display: flex; 
-        
+        display: flex;  
     }
-   
     .card{
         display: flex;
         flex-wrap: wrap;
@@ -576,9 +586,13 @@ nav ul li button  {
         position: relative;
         text-align: center;
         max-width: 100%;
-        flex-wrap: wrap;
+        flex-wrap:wrap;
         overflow: hidden;
         justify-content: center;
+        float: right;
+        margin: auto;
+        margin: auto;
+        margin-top: 10vh;
     }
     #card-home p{
         display:none;
@@ -589,10 +603,9 @@ nav ul li button  {
     #card-home >.card{
         background-image: url(../images/playing-card.jpg);
         background-color: white;
-        display: flex;
-        margin:0.5vh;
-        width:10vh;
-        height:20vh;
+        margin:3vh;
+        width:15vh;
+        height:25vh;
         flex-wrap: nowrap;
     }
     #card-home >.card > h2{
@@ -610,9 +623,6 @@ nav ul li button  {
     #card-placement >#experience-container >ul {
         padding: 0;
         list-style: none;
-    }
-    #card-placement >#experience-container >ul>ul {
-        list-style:inside;
     }
     #card-placement >#experience-container >p:first-child {
         margin-top:16px;
@@ -625,12 +635,21 @@ nav ul li button  {
    
 }
 @media only screen and (min-width: 1200px){
+    #defaultCanvas0{
+        overflow: scroll;
+    }
+    #container{
+        display:flex;
+        height:100%;
+    }
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
         border-radius: 15px;
-        width: 65%;
-        height: 45vh;
-        margin: auto;
+        width:50vh;
+        height:80vh;
+        margin:auto;
+        margin-top: 9vh;
+        margin-left: 10vh;
       }
       #card-placement .card{
         overflow-y: scroll;
@@ -638,12 +657,9 @@ nav ul li button  {
         display:block;
     }
     
-    
     nav ul {
-        display: flex; 
-        
+        display: flex;  
     }
-    
     .card{
         display: flex;
         flex-wrap: wrap;
@@ -657,10 +673,15 @@ nav ul li button  {
         display: flex;
         position: relative;
         text-align: center;
-        max-width: 100%;
+        width: 70%;
         flex-wrap: wrap;
         overflow: hidden;
-        justify-content: center;
+        justify-content: flex-start ;
+        float: right;
+        margin: auto;
+        margin: auto;
+        margin-top: 6.5vh;
+        margin-left: 10vh;
     }
     #card-home p{
         display:none;
@@ -671,10 +692,9 @@ nav ul li button  {
     #card-home >.card{
         background-image: url(../images/playing-card.jpg);
         background-color: white;
-        display: flex;
-        margin:0.5vh;
-        width:10vh;
-        height:20vh;
+        margin:3vh;
+        width:25vh;
+        height:35vh;
         flex-wrap: nowrap;
     }
     #card-home >.card > h2{
@@ -705,4 +725,7 @@ nav ul li button  {
        
     }
    
+   #card-placement >#experience-container >ul>ul {
+        list-style:inside;
+    }
 }
