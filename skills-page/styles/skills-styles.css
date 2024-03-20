@@ -14,12 +14,10 @@ a{
 }
 
 a:visited{
-    color: rgba(0, 0, 0, 0.199);
+    color: rgba(255, 0, 0, 0.199);
     bottom: none;
 }
-a:hover{
-    color: #f77070be;
-}
+
 .center-cards {
     display: flex;
     justify-content: center;
@@ -51,7 +49,7 @@ nav ul li:last-child {
 
 nav ul li button  {
     display: block;
-    color: black;
+    color: white;
     padding: 15px 20px;
     text-decoration: none;
     background: none;
@@ -92,10 +90,10 @@ nav ul li button  {
     text-align: center;
 }
 
-.dropdown ul li button {
+.dropdown ul li a {
     color: #fff;
     text-decoration: none;
-    color: #000000;
+   
     text-decoration: none;
     background: none;
     border: none;
@@ -139,6 +137,9 @@ nav ul li button  {
     z-index: 2;
 }
 #card-home .card img{
+    display: none;
+}
+#card-placement img{
     display: none;
 }
 @media only screen and (min-width: 300px) and (max-width: 400px){
@@ -644,6 +645,8 @@ nav ul li button  {
 @media only screen and (min-width: 1200px){
     #card-placement img{
         display:flex;
+        max-height: 100%;
+        max-width: 100%;
     }
     nav{
         height: 4lvh;

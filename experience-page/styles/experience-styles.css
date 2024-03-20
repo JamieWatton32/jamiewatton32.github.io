@@ -14,12 +14,10 @@ a{
     text-decoration:underline;
 }
 a:visited{
-    color: rgba(0, 0, 0, 0.199);
+    color: rgba(255, 0, 0, 0.199);
     bottom: none;
 }
-a:hover{
-    color: #f77070be;
-}
+
 .center-cards {
     display: flex;
     justify-content: center;
@@ -49,7 +47,7 @@ nav ul li:last-child {
     margin-right: 0; 
 }
 
-nav ul li button  {
+nav ul li a  {
     display: block;
     color: black;
     padding: 15px 20px;
@@ -92,7 +90,7 @@ nav ul li button  {
     text-align: center;
 }
 
-.dropdown ul li button {
+.dropdown ul li a {
     color: #fff;
     text-decoration: none;
     color: #000000;
