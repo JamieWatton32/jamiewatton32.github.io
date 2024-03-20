@@ -4,6 +4,13 @@ body {
     padding: 0;
     background-color: #0a693d;
 }
+
+iframe[iframetag] {
+    display:none;
+    border: none;
+    height: 100%;
+    width:100%;
+ }
 a:visited{
     color: rgba(0, 0, 0, 0.199);
     bottom: none;
@@ -128,9 +135,7 @@ nav ul li button  {
 #boids-sub{
     display: block;
 }
-html body div#boids-sub{
-    display: hidden;
-}
+
 @media only screen and (min-width: 300px) and (max-width: 400px){
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
@@ -632,9 +637,17 @@ html body div#boids-sub{
    
 }
 @media only screen and (min-width: 1200px){
-    #boids-sub{
-        height:100%;
+    #card-home #boids-sub{
+        display:none;
     }
+    iframe[iframetag] {
+        display:flex;
+      
+     }
+    #card-placement #boids-sub{
+        display:flex;
+    }
+ 
     #container{
         display:flex;
         height:100%;
