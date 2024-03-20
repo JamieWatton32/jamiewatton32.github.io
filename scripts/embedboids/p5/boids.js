@@ -1,34 +1,36 @@
 
 class Boid {
     constructor() {
-        this.position = createVector(random(windowWidth), random(windowHeight));
+        this.position = createVector(random(width), random(height));
         this.velocity = p5.Vector.random2D();
         this.velocity.setMag(random(1,2));
         this.acceleration = createVector();
-        this.maxAcceleration =1;
-        this.maxVelocity =4;
-        this.sight = 15;
+        this.maxAcceleration = 1;
+        this.maxVelocity = 2;
+        this.width = windowWidth;
+        this.height = windowHeight;
+        this.sight =10.5;
     }
 
     // Spawns boids
     spawnBoids() {
         point(this.position.x,this.position.y);
         strokeWeight(7);
-        stroke(255, 255, 255);
+        stroke("blue");
       
     }   
     // Confines boids to screen
     edges() {
-        if (this.position.x > window.innerWidth) {
+        if (this.position.x > this.width) {
             this.position.x = 0;
         } else if (this.position.x < 0) {
-            this.position.x = window.innerWidth;
+            this.position.x = this.width;
         }
 
-        if (this.position.y > window.innerHeight) {
+        if (this.position.y > this.height) {
             this.position.y = 0;
         } else if (this.position.y < 0) {
-            this.position.y = window.innerHeight;
+            this.position.y = this.height;
         }
     }
 
