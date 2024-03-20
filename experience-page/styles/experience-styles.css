@@ -4,6 +4,10 @@ body {
     padding: 0;
     background-color: #0a693d;
 }
+a{
+    color: #0a693d;
+    text-decoration:underline;
+}
 a:visited{
     color: rgba(0, 0, 0, 0.199);
     bottom: none;

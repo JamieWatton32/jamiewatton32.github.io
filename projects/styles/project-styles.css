@@ -11,6 +11,16 @@ iframe[iframetag] {
     height: 100%;
     width:100%;
  }
+ #card-home #boids-sub{
+    display:none;
+}
+#card-placement #boids-sub{
+    display:none;
+}
+a{
+    color: #0a693d;
+    text-decoration:underline;
+}
 a:visited{
     color: rgba(0, 0, 0, 0.199);
     bottom: none;
@@ -637,9 +647,6 @@ nav ul li button  {
    
 }
 @media only screen and (min-width: 1200px){
-    #card-home #boids-sub{
-        display:none;
-    }
     iframe[iframetag] {
         display:flex;
       

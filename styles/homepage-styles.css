@@ -5,9 +5,22 @@ body {
     background-color: #0a693d;
     height:100%
 }
-a{
-    text-decoration: none;
+object{
+    width:100%;
+    height:100%
 }
+ #card-home #PDF{
+    display:none;
+}
+#card-placement #PDF{
+    display:none;
+}
+
+a{
+    color: #0a693d;
+    text-decoration:underline;
+}
+
 a:visited{
     color:black;
     
@@ -635,8 +648,12 @@ nav ul li button  {
    
 }
 @media only screen and (min-width: 1200px){
-    #defaultCanvas0{
-        overflow: scroll;
+
+    iframe[iframetag] {
+        display:flex;
+     }
+    #card-placement #PDF{
+        display:flex;
     }
     #container{
         display:flex;
