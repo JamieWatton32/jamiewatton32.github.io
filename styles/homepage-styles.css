@@ -5,6 +5,10 @@ body {
     background-color: #0a693d;
     height:100%
 }
+html{
+    min-height: 100lvh;
+
+}
 object{
     width:100%;
     height:100%
@@ -18,16 +22,13 @@ object{
 
 a{
     color: #0a693d;
-    text-decoration:underline;
 }
 
 a:visited{
     color:black;
     
 }
-a:hover{
-    color: #f77070be;
-}
+
 .center-cards {
     display: flex;
     justify-content: center;
@@ -389,6 +390,7 @@ nav ul li button  {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px){
+    
     #card-placement{
         border: 5px dashed rgba(255,255,255,.5);
         border-radius: 15px;
@@ -401,12 +403,47 @@ nav ul li button  {
         overflow-x: hidden;
         display:block;
     }
-    nav{
-        height:3vh;
+    .hamburger {
+        display: block;
+        
+    }
+    .hamburger span {
+        padding-left: 20px;
+        
     }
     nav ul {
-        display: flex; 
+        display: none; 
         
+    }
+    .dropdown {
+        display: none; 
+        position: relative;
+
+    }
+    .dropdown.active{
+        display: block;
+    
+    }
+    .dropdown ul{
+        padding:10px
+    }
+    .dropdown li{
+        border: 2px solid #000000;
+        text-align: center;
+        grid-template-rows: repeat(auto-fit, minmax(screen, 1fr));
+        border-bottom: 0;
+        
+    }
+    .dropdown li:last-child{
+        border-bottom: 2px solid #000000;
+    }
+    .dropdown ul li button {
+        
+        font-size: 20px;
+        font-weight: bold;
+        padding:0;
+        text-align: center;
+    
     }
    
     .card{
@@ -473,7 +510,26 @@ nav ul li button  {
 
 }
 @media only screen and (min-width: 768px) and (max-width:991px){
+    nav{
+        height: 4lvh;
+    }
+    nav ul {
+        margin:auto;
+        margin-left:0;
+    }
+    nav ul li a{
+        margin-top: 2lvh;
+        font-size: 1rem;
+        background-color: #000000;
+        border-radius: 20px;
+        color:#fff;
+        padding: 4px;
+        text-decoration: none;
+    }
 
+    nav a:visited{
+        color: #fff;
+    }
     #container{
         display:flex;
         height:100%;
@@ -562,7 +618,26 @@ nav ul li button  {
    
 }
 @media only screen and (min-width: 992px) and (max-width:1199px){
-    
+    nav{
+        height: 4lvh;
+    }
+    nav ul {
+        margin:auto;
+        margin-left:0;
+    }
+    nav ul li a{
+        margin-top: 2lvh;
+        font-size: 1rem;
+        background-color: #000000;
+        border-radius: 20px;
+        color:#fff;
+        padding: 4px;
+        text-decoration: none;
+    }
+
+    nav a:visited{
+        color: #fff;
+    }
     #container{
         display:flex;
         height:100%;
@@ -648,7 +723,27 @@ nav ul li button  {
    
 }
 @media only screen and (min-width: 1200px){
+    nav{
+        height: 4lvh;
+    }
+    nav ul {
+        margin:auto;
+        margin-left:0;
+    }
+    nav ul li a{
+        margin-top: 2lvh;
+        font-size: 1rem;
+        background-color: #000000;
+        border-radius: 20px;
+        color:#fff;
+        padding: 4px;
+        text-decoration: none;
+    }
 
+    nav a:visited{
+        color: #fff;
+    }
+    
     iframe[iframetag] {
         display:flex;
      }
@@ -665,8 +760,9 @@ nav ul li button  {
         width:50vh;
         height:80vh;
         margin:auto;
-        margin-top: 9vh;
-        margin-left: 10vh;
+        margin-top: 9lvh;
+        margin-left: 11vh;
+    
       }
       #card-placement .card{
         overflow-y: scroll;
@@ -690,15 +786,14 @@ nav ul li button  {
         display: flex;
         position: relative;
         text-align: center;
-        width: 70%;
+        width: 64%;
         flex-wrap: wrap;
         overflow: hidden;
-        justify-content: flex-start ;
-        float: right;
         margin: auto;
-        margin: auto;
-        margin-top: 6.5vh;
-        margin-left: 10vh;
+        margin-left: 10lvw;
+        margin-top: 5lvh;
+        margin-bottom: 5lvh;
+
     }
     #card-home p{
         display:none;
@@ -716,33 +811,18 @@ nav ul li button  {
     }
     #card-home >.card > h2{
         position: relative;
-        font-size: 16px;
+        font-size: 32px;
         height: fit-content;
         margin: auto;
+        background-color:white;
     }
-    #card-placement >#about-container >p {
-        font-size: 14px;
+    #card-placement >.card >p {
+        font-size: 24px;
     }
-    #card-placement >#experience-container >h2 {
-        font-size: 15px;
+    #card-placement >.card>h2 {
+        font-size: 24px;
     }
-    #card-placement >#experience-container >ul {
-        padding: 0;
-        list-style: none;
-    }
-    #card-placement >#experience-container >ul>ul {
-        list-style:inside;
-    }
-    #card-placement >#experience-container >p:first-child {
-        margin-top:16px;
-    }
-    #card-placement >#projects-container >ul {
-        list-style: inside;
-        padding:0;
-       
-    }
-   
-   #card-placement >#experience-container >ul>ul {
-        list-style:inside;
+    #card-placement >.card ul li {
+        font-size: 24px;
     }
 }

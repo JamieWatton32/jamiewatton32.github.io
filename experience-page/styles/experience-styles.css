@@ -4,6 +4,11 @@ body {
     padding: 0;
     background-color: #0a693d;
 }
+html{
+    min-height: 100lvh;
+
+}
+
 a{
     color: #0a693d;
     text-decoration:underline;
@@ -735,7 +740,26 @@ nav ul li button  {
    
 }
 @media only screen and (min-width: 1200px){
-    
+    nav{
+        height: 4lvh;
+    }
+    nav ul {
+        margin:auto;
+        margin-left:0;
+    }
+    nav ul li a{
+        margin-top: 2lvh;
+        font-size: 20px;
+        background-color: #000000;
+        border-radius: 20px;
+        color:#fff;
+        padding: 5px;
+        text-decoration: none;
+    }
+
+    nav a:visited{
+        color: #fff;
+    }
     #container{
         display:flex;
         height:100%;
@@ -746,8 +770,9 @@ nav ul li button  {
         width:50vh;
         height:80vh;
         margin:auto;
-        margin-top: 9vh;
-        margin-left: 10vh;
+        margin-top: 9lvh;
+        margin-left: 11vh;
+    
       }
       #card-placement .card{
         overflow-y: scroll;
@@ -771,15 +796,14 @@ nav ul li button  {
         display: flex;
         position: relative;
         text-align: center;
-        width: 70%;
+        width: 64%;
         flex-wrap: wrap;
         overflow: hidden;
-        justify-content: flex-start ;
-        float: right;
         margin: auto;
-        margin: auto;
-        margin-top: 6.5vh;
-        margin-left: 10vh;
+        margin-left: 10lvw;
+        margin-top: 5lvh;
+        margin-bottom: 5lvh;
+
     }
     #card-home p{
         display:none;
@@ -797,34 +821,15 @@ nav ul li button  {
     }
     #card-home >.card > h2{
         position: relative;
-        font-size: 16px;
+        font-size: 32px;
         height: fit-content;
         margin: auto;
     }
-    #card-placement >#about-container >p {
-        font-size: 14px;
+    #card-placement >.card >p {
+        font-size: 24px;
     }
-    #card-placement >#experience-container >h2 {
-        font-size: 15px;
+    #card-placement >.card>h2 {
+        font-size: 24px;
     }
-    #card-placement >#experience-container >ul {
-        padding: 0;
-        list-style: none;
-    }
-    #card-placement >#experience-container >ul>ul {
-        list-style:inside;
-    }
-    #card-placement >#experience-container >p:first-child {
-        margin-top:16px;
-    }
-    #card-placement >#projects-container >ul {
-        list-style: inside;
-        padding:0;
-       
-    }
-   
 }
-   #card-placement >#experience-container >ul>ul {
-        list-style:inside;
-    }
  
